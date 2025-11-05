@@ -1,5 +1,6 @@
 package com.example.rajzok13a;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -51,5 +52,9 @@ public class RajzokController implements Initializable {
 
         //
 
+    }
+
+    public void handleKilepes() {
+        Platform.exit();
     }
 }

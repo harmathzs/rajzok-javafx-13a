@@ -13,7 +13,7 @@
             <items>
                   <MenuItem id="menuItemMegnyitas" fx:id="menuItemMegnyitas" mnemonicParsing="false" text="Megnyitás" />
                   <MenuItem fx:id="menuItemMentes" mnemonicParsing="false" text="Mentés" />
-              <MenuItem fx:id="menuItemKilepes" mnemonicParsing="false" text="Kilépés" />
+              <MenuItem fx:id="menuItemKilepes" mnemonicParsing="false" text="Kilépés" onAction="#handleKilepes" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Gondol">

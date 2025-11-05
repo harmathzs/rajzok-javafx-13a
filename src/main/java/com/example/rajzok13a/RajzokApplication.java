@@ -13,6 +13,7 @@ public class RajzokApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(RajzokApplication.class.getResource("rajzok-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Rajzok");
+        // TODO - set icon
         stage.setScene(scene);
         stage.show();
     }

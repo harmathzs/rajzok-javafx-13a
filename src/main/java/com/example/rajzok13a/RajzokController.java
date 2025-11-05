@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
@@ -29,6 +30,15 @@ public class RajzokController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // load initial images
+        imageView1.setImage(new Image("file:rajzok/baba.png"));
+        imageView2.setImage(new Image("file:rajzok/vonat.png"));
+        imageView3.setImage(new Image("file:rajzok/hajo.png"));
+        imageView4.setImage(new Image("file:rajzok/hintalo.png"));
+        // TODO - style image squares
+        // TODO - add button images
+
+        //
 
     }
 }

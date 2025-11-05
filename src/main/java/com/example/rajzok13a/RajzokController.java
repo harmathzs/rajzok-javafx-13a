@@ -11,8 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class RajzokController implements Initializable {
     @FXML public MenuItem menuItemMegnyitas;
@@ -32,9 +31,12 @@ public class RajzokController implements Initializable {
     @FXML public ListView<String> listview;
 
     // store data
-    public String[] nev = { "Baba", "Hajó", "Hintaló", "Nyuszi", "Repülő", "Tirex", "Vonat" };
-    public String[] kepnev = { "baba", "hajo", "hintalo", "nyuszi", "repulo", "tirex", "vonat" };
+    public String[] nev = { "Baba", "Vonat", "Hajó", "Hintaló", "Nyuszi", "Repülő", "Tirex" };
+    public String[] kepnev = { "baba", "vonat", "hajo", "hintalo", "nyuszi", "repulo", "tirex" };
     public Image[] kep = new Image[7];
+
+    // store 4 of map: baba -> image
+    public List<Map<String, Image>> pos4 = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -42,10 +44,31 @@ public class RajzokController implements Initializable {
         for (int i=0; i<kep.length; i++) {
            kep[i] = new Image("file:rajzok/"+kepnev[i]+".png");
 
-           if (Objects.equals(kepnev[i], "baba")) imageView1.setImage(kep[i]);
-           if (Objects.equals(kepnev[i], "vonat")) imageView2.setImage(kep[i]);
-           if (Objects.equals(kepnev[i], "hajo")) imageView3.setImage(kep[i]);
-           if (Objects.equals(kepnev[i], "hintalo")) imageView4.setImage(kep[i]);
+           if (Objects.equals(kepnev[i], "baba")) {
+               imageView1.setImage(kep[i]);
+               Map<String, Image> map = new HashMap<>();
+               map.put("baba", kep[i]);
+               pos4.add(map);
+           }
+
+           if (Objects.equals(kepnev[i], "vonat")) {
+               imageView2.setImage(kep[i]);
+               Map<String, Image> map = new HashMap<>();
+               map.put("vonat", kep[i]);
+               pos4.add(map);
+           }
+           if (Objects.equals(kepnev[i], "hajo")) {
+               imageView3.setImage(kep[i]);
+               Map<String, Image> map = new HashMap<>();
+               map.put("hajo", kep[i]);
+               pos4.add(map);
+           }
+           if (Objects.equals(kepnev[i], "hintalo")) {
+               imageView4.setImage(kep[i]);
+               Map<String, Image> map = new HashMap<>();
+               map.put("hintalo", kep[i]);
+               pos4.add(map);
+           }
         }
 
         // TODO - style image squares

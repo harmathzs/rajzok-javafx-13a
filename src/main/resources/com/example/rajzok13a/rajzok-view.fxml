@@ -11,21 +11,21 @@
         <menus>
           <Menu mnemonicParsing="false" text="Fájl">
             <items>
-                  <MenuItem id="menuItemMegnyitas" fx:id="menuItemMegnyitas" mnemonicParsing="false" text="Megnyitás" />
-                  <MenuItem fx:id="menuItemMentes" mnemonicParsing="false" text="Mentés" />
+                  <MenuItem id="menuItemMegnyitas" fx:id="menuItemMegnyitas" mnemonicParsing="false" text="Megnyitás" onAction="#handleMegnyitas" />
+                  <MenuItem fx:id="menuItemMentes" mnemonicParsing="false" text="Mentés" onAction="#handleMentes" />
               <MenuItem fx:id="menuItemKilepes" mnemonicParsing="false" text="Kilépés" onAction="#handleKilepes" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Gondol">
             <items>
-              <MenuItem fx:id="menuItemKulonbozo" mnemonicParsing="false" text="Különböző" />
-                  <MenuItem fx:id="menuItemEgyforma" mnemonicParsing="false" text="Egyforma" />
-                  <MenuItem fx:id="menuItemElso" mnemonicParsing="false" text="Első" />
+              <MenuItem fx:id="menuItemKulonbozo" mnemonicParsing="false" text="Különböző" onAction="#handleKulonbozo" />
+                  <MenuItem fx:id="menuItemEgyforma" mnemonicParsing="false" text="Egyforma" onAction="#handleEgyforma" />
+                  <MenuItem fx:id="menuItemElso" mnemonicParsing="false" text="Első" onAction="#handleElso" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Súgó">
             <items>
-              <MenuItem fx:id="menuItemNevjegy" mnemonicParsing="false" text="Névjegy" />
+              <MenuItem fx:id="menuItemNevjegy" mnemonicParsing="false" text="Névjegy" onAction="#handleNevjegy" />
             </items>
           </Menu>
         </menus>
@@ -50,9 +50,9 @@
                   <ImageView fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <ImageView fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" layoutX="167.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <ImageView fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" layoutX="317.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="buttonHozzaad" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="buttonModosit" layoutX="17.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="buttonTorol" layoutX="167.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonHozzaad" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleHozzaad" />
+                  <Button fx:id="buttonModosit" layoutX="17.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleModosit" />
+                  <Button fx:id="buttonTorol" layoutX="167.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleTorol" />
                </children>
             </GridPane>
             <ListView fx:id="listview" prefHeight="250.0" prefWidth="560.0">

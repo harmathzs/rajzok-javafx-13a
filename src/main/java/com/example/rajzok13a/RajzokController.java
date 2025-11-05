@@ -54,7 +54,43 @@ public class RajzokController implements Initializable {
 
     }
 
+    public void handleMegnyitas() {
+
+    }
+
+    public void handleMentes() {
+
+    }
+
     public void handleKilepes() {
         Platform.exit();
+    }
+
+    public void handleKulonbozo() {
+
+    }
+
+    public void handleEgyforma() {
+
+    }
+
+    public void handleElso() {
+
+    }
+
+    public void handleNevjegy() {
+
+    }
+
+    public void handleHozzaad() {
+
+    }
+
+    public void handleModosit() {
+
+    }
+
+    public void handleTorol() {
+
     }
 }

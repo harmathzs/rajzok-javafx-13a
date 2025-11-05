@@ -11,21 +11,21 @@
         <menus>
           <Menu mnemonicParsing="false" text="Fájl">
             <items>
-                  <MenuItem id="menuItemMegnyitas" fx:id="menuItemMegnyitas" mnemonicParsing="false" text="Megnyitás" onAction="#handleMegnyitas" />
-                  <MenuItem fx:id="menuItemMentes" mnemonicParsing="false" text="Mentés" onAction="#handleMentes" />
-              <MenuItem fx:id="menuItemKilepes" mnemonicParsing="false" text="Kilépés" onAction="#handleKilepes" />
+                  <MenuItem id="menuItemMegnyitas" fx:id="menuItemMegnyitas" mnemonicParsing="false" onAction="#handleMegnyitas" text="Megnyitás" />
+                  <MenuItem fx:id="menuItemMentes" mnemonicParsing="false" onAction="#handleMentes" text="Mentés" />
+              <MenuItem fx:id="menuItemKilepes" mnemonicParsing="false" onAction="#handleKilepes" text="Kilépés" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Gondol">
             <items>
-              <MenuItem fx:id="menuItemKulonbozo" mnemonicParsing="false" text="Különböző" onAction="#handleKulonbozo" />
-                  <MenuItem fx:id="menuItemEgyforma" mnemonicParsing="false" text="Egyforma" onAction="#handleEgyforma" />
-                  <MenuItem fx:id="menuItemElso" mnemonicParsing="false" text="Első" onAction="#handleElso" />
+              <MenuItem fx:id="menuItemKulonbozo" mnemonicParsing="false" onAction="#handleKulonbozo" text="Különböző" />
+                  <MenuItem fx:id="menuItemEgyforma" mnemonicParsing="false" onAction="#handleEgyforma" text="Egyforma" />
+                  <MenuItem fx:id="menuItemElso" mnemonicParsing="false" onAction="#handleElso" text="Első" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Súgó">
             <items>
-              <MenuItem fx:id="menuItemNevjegy" mnemonicParsing="false" text="Névjegy" onAction="#handleNevjegy" />
+              <MenuItem fx:id="menuItemNevjegy" mnemonicParsing="false" onAction="#handleNevjegy" text="Névjegy" />
             </items>
           </Menu>
         </menus>
@@ -46,13 +46,13 @@
                 <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fx:id="imageView1" fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" layoutX="167.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" layoutX="317.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="buttonHozzaad" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleHozzaad" />
-                  <Button fx:id="buttonModosit" layoutX="17.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleModosit" />
-                  <Button fx:id="buttonTorol" layoutX="167.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleTorol" />
+                  <ImageView fx:id="imageView1" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage1Click" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" layoutX="17.0" layoutY="17.0" onMouseClicked="#handleImage2Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" layoutX="167.0" layoutY="17.0" onMouseClicked="#handleImage3Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" layoutX="317.0" layoutY="17.0" onMouseClicked="#handleImage4Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonHozzaad" mnemonicParsing="false" onAction="#handleHozzaad" prefHeight="25.0" prefWidth="108.0" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonModosit" layoutX="17.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleModosit" prefHeight="25.0" prefWidth="108.0" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonTorol" layoutX="167.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleTorol" prefHeight="25.0" prefWidth="108.0" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <ListView fx:id="listview" prefHeight="250.0" prefWidth="560.0">

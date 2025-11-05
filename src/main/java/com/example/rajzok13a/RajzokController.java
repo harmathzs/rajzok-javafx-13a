@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.Objects;
@@ -52,6 +53,44 @@ public class RajzokController implements Initializable {
 
         //
 
+    }
+
+    public void handleImageClick(int idx) {
+        int newId = (int) (Math.random() * kep.length);
+        switch (idx) {
+            case 1: {
+                imageView1.setImage(kep[newId]);
+                break;
+            }
+            case 2: {
+                imageView2.setImage(kep[newId]);
+                break;
+            }
+            case 3: {
+                imageView3.setImage(kep[newId]);
+                break;
+            }
+            case 4: {
+                imageView4.setImage(kep[newId]);
+                break;
+            }
+        }
+    }
+
+    public void handleImage1Click() {
+        handleImageClick(1);
+    }
+
+    public void handleImage2Click() {
+        handleImageClick(2);
+    }
+
+    public void handleImage3Click() {
+        handleImageClick(3);
+    }
+
+    public void handleImage4Click() {
+        handleImageClick(4);
     }
 
     public void handleMegnyitas() {

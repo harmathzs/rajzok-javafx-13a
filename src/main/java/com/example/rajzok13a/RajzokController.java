@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class RajzokController implements Initializable {
@@ -28,13 +29,23 @@ public class RajzokController implements Initializable {
     @FXML public Button buttonTorol;
     @FXML public ListView<String> listview;
 
+    // store data
+    public String[] nev = { "Baba", "Hajó", "Hintaló", "Nyuszi", "Repülő", "Tirex", "Vonat" };
+    public String[] kepnev = { "baba", "hajo", "hintalo", "nyuszi", "repulo", "tirex", "vonat" };
+    public Image[] kep = new Image[7];
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // load initial images
-        imageView1.setImage(new Image("file:rajzok/baba.png"));
-        imageView2.setImage(new Image("file:rajzok/vonat.png"));
-        imageView3.setImage(new Image("file:rajzok/hajo.png"));
-        imageView4.setImage(new Image("file:rajzok/hintalo.png"));
+        for (int i=0; i<kep.length; i++) {
+           kep[i] = new Image("file:rajzok/"+kepnev[i]+".png");
+
+           if (Objects.equals(kepnev[i], "baba")) imageView1.setImage(kep[i]);
+           if (Objects.equals(kepnev[i], "vonat")) imageView2.setImage(kep[i]);
+           if (Objects.equals(kepnev[i], "hajo")) imageView3.setImage(kep[i]);
+           if (Objects.equals(kepnev[i], "hintalo")) imageView4.setImage(kep[i]);
+        }
+
         // TODO - style image squares
         // TODO - add button images
 
